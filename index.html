@@ -19,237 +19,287 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #faf8f5;
-      color: #4a433d;
+      background: #f8f4ef;
+      color: #4b4139;
       line-height: 1.6;
     }
 
-    /* PORTADA */
-
     .hero {
       min-height: 100vh;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+
+    .hero-logo {
+      display: flex;
       justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-
-      background:
-        linear-gradient(
-          rgba(255,255,255,0.82),
-          rgba(250,246,240,0.90)
-        );
+      align-items: center;
     }
 
-    .hero-content {
-      max-width: 750px;
+    .hero-logo img {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 28px;
+      box-shadow: 0 22px 55px rgba(88, 67, 49, 0.13);
     }
 
-    .decoracion {
-      font-size: 42px;
-      color: #b89b78;
-      margin-bottom: 10px;
+    .hero-texto {
+      padding: 20px;
     }
 
-    h1 {
+    .etiqueta {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      color: #b28b5f;
+      margin-bottom: 18px;
+    }
+
+    .hero-texto h1 {
       font-family: Georgia, serif;
       font-size: 58px;
+      line-height: 1.05;
       font-weight: normal;
-      font-style: italic;
-      color: #3f3934;
-      margin-bottom: 5px;
+      margin-bottom: 24px;
+      color: #352e29;
     }
 
-    .subtitulo {
-      font-family: Georgia, serif;
-      font-size: 30px;
+    .hero-texto h1 span {
       font-style: italic;
-      margin-bottom: 25px;
-      color: #75685d;
+      color: #b98b52;
     }
 
-    .frase {
+    .hero-texto p {
       font-size: 19px;
-      max-width: 550px;
-      margin: 0 auto 35px;
-      color: #766d65;
+      color: #72665d;
+      max-width: 520px;
+      margin-bottom: 32px;
     }
 
     .boton {
       display: inline-block;
       text-decoration: none;
-      background: #b89b78;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: #b48a58;
       color: white;
-      padding: 14px 30px;
-      border-radius: 30px;
-      font-size: 17px;
+      font-size: 16px;
       transition: 0.3s;
     }
 
     .boton:hover {
-      background: #957b5e;
+      background: #926c43;
       transform: translateY(-2px);
     }
 
-    /* SECCIONES */
-
     section {
-      padding: 80px 20px;
+      padding: 90px 25px;
     }
 
     .contenedor {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
     }
 
     .titulo-seccion {
       text-align: center;
       font-family: Georgia, serif;
-      font-size: 38px;
+      font-size: 42px;
       font-weight: normal;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      color: #3d342e;
+    }
+
+    .sub-seccion {
+      text-align: center;
+      color: #82746a;
+      max-width: 650px;
+      margin: 0 auto 45px;
+      font-size: 17px;
     }
 
     .linea {
-      width: 60px;
+      width: 70px;
       height: 2px;
-      background: #c5aa87;
-      margin: 0 auto 35px;
+      background: #c9a476;
+      margin: 0 auto 25px;
     }
 
-    /* NOSOTROS */
-
-    .nosotros {
+    .presentacion {
       background: white;
       text-align: center;
     }
 
-    .nosotros p {
-      max-width: 720px;
+    .presentacion p {
+      max-width: 760px;
       margin: auto;
       font-size: 18px;
-      color: #71685f;
+      color: #74695f;
     }
 
-    /* PRODUCTOS */
-
-    .productos {
-      background: #f4efe9;
+    .categorias {
+      background: #eee6de;
     }
 
-    .tarjetas {
+    .grid-categorias {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 24px;
     }
 
-    .tarjeta {
+    .categoria {
+      min-height: 300px;
       background: white;
-      padding: 45px 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      border-radius: 20px;
+      padding: 38px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      box-shadow: 0 10px 30px rgba(70, 50, 35, 0.07);
+      transition: 0.3s;
     }
 
-    .icono {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .categoria:hover {
+      transform: translateY(-6px);
     }
 
-    .tarjeta h3 {
+    .categoria .numero {
       font-family: Georgia, serif;
-      font-size: 23px;
+      font-size: 46px;
+      color: #d7b892;
+      margin-bottom: auto;
+    }
+
+    .categoria h3 {
+      font-family: Georgia, serif;
+      font-size: 28px;
       font-weight: normal;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .tarjeta p {
-      color: #81766c;
+    .categoria p {
+      color: #7e7167;
     }
 
-    /* CONTACTO */
+    .destacados {
+      background: white;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .producto {
+      background: #faf7f3;
+      border-radius: 18px;
+      min-height: 270px;
+      padding: 30px;
+      display: flex;
+      align-items: flex-end;
+      border: 1px solid #eadfd3;
+    }
+
+    .producto h3 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: normal;
+    }
 
     .contacto {
+      background: #3d342e;
+      color: white;
       text-align: center;
-      background: white;
+    }
+
+    .contacto .titulo-seccion {
+      color: white;
     }
 
     .contacto p {
-      font-size: 18px;
+      color: #e6ddd5;
       margin-bottom: 30px;
-      color: #71685f;
+      font-size: 18px;
     }
 
     .whatsapp {
-      background: #7e9274;
+      background: #b68a56;
     }
-
-    .whatsapp:hover {
-      background: #687a60;
-    }
-
-    /* FOOTER */
 
     footer {
-      background: #ded2c4;
-      padding: 35px 20px;
+      background: #2f2925;
+      color: #d8cec5;
       text-align: center;
-      color: #5e554e;
+      padding: 32px 20px;
     }
 
     footer strong {
       font-family: Georgia, serif;
-      font-size: 20px;
+      font-size: 22px;
+      color: white;
       font-weight: normal;
     }
 
-    /* CELULAR */
-
-    @media (max-width: 750px) {
-
-      h1 {
-        font-size: 43px;
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 35px;
       }
 
-      .subtitulo {
-        font-size: 25px;
+      .hero-texto p {
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .tarjetas {
+      .hero-texto h1 {
+        font-size: 45px;
+      }
+
+      .grid-categorias,
+      .productos-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        min-height: 90vh;
+      .hero-logo img {
+        max-width: 440px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- PORTADA -->
-
   <header class="hero">
 
-    <div class="hero-content">
+    <div class="hero-logo">
+      <img src="logo-espacio-sonado.jpeg" alt="Espacio Soñado deco & home">
+    </div>
 
-      <div class="decoracion">❦</div>
+    <div class="hero-texto">
 
-      <h1>Espacio Soñado</h1>
-
-      <div class="subtitulo">
-        deco & home
+      <div class="etiqueta">
+        Deco · Home · Detalles
       </div>
 
-      <p class="frase">
-        Detalles que transforman espacios
-        y hacen de cada rincón un lugar especial.
+      <h1>
+        Tu hogar también puede ser
+        <span>tu espacio soñado.</span>
+      </h1>
+
+      <p>
+        Objetos, texturas y detalles elegidos para transformar
+        cada rincón en un lugar cálido, personal y especial.
       </p>
 
-      <a class="boton" href="#productos">
-        Descubrí nuestro espacio
+      <a class="boton" href="#coleccion">
+        Conocé nuestro mundo
       </a>
 
     </div>
@@ -257,23 +307,21 @@
   </header>
 
 
-  <!-- NOSOTROS -->
-
-  <section class="nosotros">
+  <section class="presentacion">
 
     <div class="contenedor">
 
       <h2 class="titulo-seccion">
-        Creamos espacios para soñar
+        Más que decoración
       </h2>
 
       <div class="linea"></div>
 
       <p>
-        En Espacio Soñado creemos que los pequeños detalles
-        pueden transformar un hogar. Elegimos objetos,
-        texturas y diseños pensados para crear ambientes
-        cálidos, delicados y llenos de personalidad.
+        En Espacio Soñado creemos que un hogar se construye
+        también con sensaciones. Cada objeto puede aportar
+        calidez, armonía y personalidad a los espacios que
+        forman parte de nuestra vida.
       </p>
 
     </div>
@@ -281,44 +329,47 @@
   </section>
 
 
-  <!-- PRODUCTOS -->
-
-  <section class="productos" id="productos">
+  <section class="categorias" id="coleccion">
 
     <div class="contenedor">
 
       <h2 class="titulo-seccion">
-        Nuestro mundo
+        Descubrí nuestro estilo
       </h2>
 
       <div class="linea"></div>
 
-      <div class="tarjetas">
+      <p class="sub-seccion">
+        Una selección pensada para quienes disfrutan de los
+        pequeños detalles que hacen único cada ambiente.
+      </p>
 
-        <div class="tarjeta">
-          <div class="icono">♡</div>
+      <div class="grid-categorias">
+
+        <div class="categoria">
+          <div class="numero">01</div>
           <h3>Deco</h3>
           <p>
-            Objetos y detalles para darle
-            personalidad a cada rincón.
+            Objetos que aportan personalidad,
+            textura y calidez.
           </p>
         </div>
 
-        <div class="tarjeta">
-          <div class="icono">⌂</div>
+        <div class="categoria">
+          <div class="numero">02</div>
           <h3>Home</h3>
           <p>
-            Ideas pensadas para crear
-            espacios cálidos y únicos.
+            Detalles pensados para acompañar
+            la vida cotidiana.
           </p>
         </div>
 
-        <div class="tarjeta">
-          <div class="icono">❀</div>
-          <h3>Detalles</h3>
+        <div class="categoria">
+          <div class="numero">03</div>
+          <h3>Regalos</h3>
           <p>
-            Pequeñas cosas que hacen
-            de una casa un hogar.
+            Pequeños detalles para regalar
+            y sorprender.
           </p>
         </div>
 
@@ -329,7 +380,41 @@
   </section>
 
 
-  <!-- CONTACTO -->
+  <section class="destacados">
+
+    <div class="contenedor">
+
+      <h2 class="titulo-seccion">
+        Nuestros favoritos
+      </h2>
+
+      <div class="linea"></div>
+
+      <p class="sub-seccion">
+        Próximamente vamos a colocar aquí las fotos reales
+        de los productos destacados.
+      </p>
+
+      <div class="productos-grid">
+
+        <div class="producto">
+          <h3>Detalles para tu living</h3>
+        </div>
+
+        <div class="producto">
+          <h3>Ideas para regalar</h3>
+        </div>
+
+        <div class="producto">
+          <h3>Deco para cada rincón</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="contacto">
 
@@ -342,22 +427,18 @@
       <div class="linea"></div>
 
       <p>
-        Consultanos por nuestros productos,
-        disponibilidad y novedades.
+        Consultanos por productos, disponibilidad,
+        novedades y pedidos.
       </p>
 
-      <!-- Después colocaremos aquí el WhatsApp real -->
-
       <a class="boton whatsapp" href="#">
-        Contactanos por WhatsApp
+        Consultar por WhatsApp
       </a>
 
     </div>
 
   </section>
 
-
-  <!-- PIE -->
 
   <footer>
 
@@ -369,7 +450,7 @@
 
     <br><br>
 
-    Hecho con ♡ para tu hogar
+    Detalles que hacen hogar
 
   </footer>
 
