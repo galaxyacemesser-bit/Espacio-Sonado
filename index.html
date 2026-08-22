@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Espacio Soñado | Deco & Home</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf8f5;
+      color: #4a433d;
+      line-height: 1.6;
+    }
+
+    /* PORTADA */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+
+      background:
+        linear-gradient(
+          rgba(255,255,255,0.82),
+          rgba(250,246,240,0.90)
+        );
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .decoracion {
+      font-size: 42px;
+      color: #b89b78;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 58px;
+      font-weight: normal;
+      font-style: italic;
+      color: #3f3934;
+      margin-bottom: 5px;
+    }
+
+    .subtitulo {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      font-style: italic;
+      margin-bottom: 25px;
+      color: #75685d;
+    }
+
+    .frase {
+      font-size: 19px;
+      max-width: 550px;
+      margin: 0 auto 35px;
+      color: #766d65;
+    }
+
+    .boton {
+      display: inline-block;
+      text-decoration: none;
+      background: #b89b78;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .boton:hover {
+      background: #957b5e;
+      transform: translateY(-2px);
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .contenedor {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .titulo-seccion {
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 38px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .linea {
+      width: 60px;
+      height: 2px;
+      background: #c5aa87;
+      margin: 0 auto 35px;
+    }
+
+    /* NOSOTROS */
+
+    .nosotros {
+      background: white;
+      text-align: center;
+    }
+
+    .nosotros p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      color: #71685f;
+    }
+
+    /* PRODUCTOS */
+
+    .productos {
+      background: #f4efe9;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .tarjeta {
+      background: white;
+      padding: 45px 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .icono {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .tarjeta h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta p {
+      color: #81766c;
+    }
+
+    /* CONTACTO */
+
+    .contacto {
+      text-align: center;
+      background: white;
+    }
+
+    .contacto p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #71685f;
+    }
+
+    .whatsapp {
+      background: #7e9274;
+    }
+
+    .whatsapp:hover {
+      background: #687a60;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #ded2c4;
+      padding: 35px 20px;
+      text-align: center;
+      color: #5e554e;
+    }
+
+    footer strong {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 750px) {
+
+      h1 {
+        font-size: 43px;
+      }
+
+      .subtitulo {
+        font-size: 25px;
+      }
+
+      .tarjetas {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="decoracion">❦</div>
+
+      <h1>Espacio Soñado</h1>
+
+      <div class="subtitulo">
+        deco & home
+      </div>
+
+      <p class="frase">
+        Detalles que transforman espacios
+        y hacen de cada rincón un lugar especial.
+      </p>
+
+      <a class="boton" href="#productos">
+        Descubrí nuestro espacio
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- NOSOTROS -->
+
+  <section class="nosotros">
+
+    <div class="contenedor">
+
+      <h2 class="titulo-seccion">
+        Creamos espacios para soñar
+      </h2>
+
+      <div class="linea"></div>
+
+      <p>
+        En Espacio Soñado creemos que los pequeños detalles
+        pueden transformar un hogar. Elegimos objetos,
+        texturas y diseños pensados para crear ambientes
+        cálidos, delicados y llenos de personalidad.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTOS -->
+
+  <section class="productos" id="productos">
+
+    <div class="contenedor">
+
+      <h2 class="titulo-seccion">
+        Nuestro mundo
+      </h2>
+
+      <div class="linea"></div>
+
+      <div class="tarjetas">
+
+        <div class="tarjeta">
+          <div class="icono">♡</div>
+          <h3>Deco</h3>
+          <p>
+            Objetos y detalles para darle
+            personalidad a cada rincón.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="icono">⌂</div>
+          <h3>Home</h3>
+          <p>
+            Ideas pensadas para crear
+            espacios cálidos y únicos.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="icono">❀</div>
+          <h3>Detalles</h3>
+          <p>
+            Pequeñas cosas que hacen
+            de una casa un hogar.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section class="contacto">
+
+    <div class="contenedor">
+
+      <h2 class="titulo-seccion">
+        Encontrá tu espacio soñado
+      </h2>
+
+      <div class="linea"></div>
+
+      <p>
+        Consultanos por nuestros productos,
+        disponibilidad y novedades.
+      </p>
+
+      <!-- Después colocaremos aquí el WhatsApp real -->
+
+      <a class="boton whatsapp" href="#">
+        Contactanos por WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PIE -->
+
+  <footer>
+
+    <strong>Espacio Soñado</strong>
+
+    <br>
+
+    deco & home
+
+    <br><br>
+
+    Hecho con ♡ para tu hogar
+
+  </footer>
+
+</body>
+</html>
